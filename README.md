@@ -4,3 +4,6 @@ Account created on `Wed Jul 16 06:28:08 PM IST 2025`
 
 Profile: [@ayanaksha](https://codeforces.com/profile/ayanaksha)
 
+## 100 problems solved: `Sun Jul 27 06:45:16 AM IST 2025`
+
+![Sun Jul 27 06:45:16 AM IST 2025](./assets/100_problems_2025-07-27.png)
