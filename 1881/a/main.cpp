@@ -4,27 +4,39 @@ int main(void){
   int t;
   cin >> t;
   while(t--){
-    int n, m, maxCtr = INT_MIN;
-    bool notfound = true;
+    int n, m, ctr{};
+    bool notFound = false;
     string x, s;
-    map<char, int> mem;
     cin >> n >> m >> x >> s;
-    for(auto e: s){
-      mem[e]++;
-      if(mem[e] > maxCtr){
-        maxCtr = mem[e];
+    if(n < m){
+      for(auto e: x){
+        if(!s.contains(e)) {
+          notFound = true;
+        }
+      }
+    } else {
+      for(auto e: s){
+        if(!x.contains(e)) {
+          notFound = true;
+        }
       }
     }
-    for(int i{}; i<=maxCtr; i++){
-      if(x.contains(s)){
-        cout << i << endl;
-        notfound = false;
+    if(notFound){
+      cout << -1 << endl;
+      continue;
+    }
+    while(!x.contains(s)){
+      ++ctr;
+      x+=x;
+      if(ctr > 10){
+        notFound = true;
         break;
       }
-      x+=x;
     }
-    if(notfound){
+    if(notFound){
       cout << -1 << endl;
+    } else {
+      cout << ctr << endl;
     }
   }
   return 0;
