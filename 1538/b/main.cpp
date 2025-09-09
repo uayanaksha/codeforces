@@ -14,11 +14,11 @@ int main(void){
       cin >> i;
       sum += i;
     }
-    if((sum/n)*n != sum){
+    q = sum/n;
+    if(q*n != sum){
       cout << -1 << endl;
       continue;
     }
-    q = sum/n;
     for(ll i: mem){
       if(i>q){
         ++ctr;
