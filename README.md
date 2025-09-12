@@ -12,3 +12,7 @@ Profile: [@ayanaksha](https://codeforces.com/profile/ayanaksha)
 
 ![Tue Aug 19 01:56:32 AM IST 2025](./assets/250_problems_2025-08-19.png)
 
+## 300 problems solved: `Fri Sep 12 06:33:11 AM IST 2025`
+
+![Fri Sep 12 06:33:11 AM IST 2025](./assets/300_problems_2025-09-12.png)
+
