@@ -7,25 +7,12 @@ int main(void){
   int t;
   cin >> t;
   while(t--){
-    ll n, ctr{};
+    double n;
     cin >> n;
-    vector<bool> mem(n+1, false);
-    for(ll i{1}; i*i*i<=n; ++i){
-      ll val = i*i*i;
-      if(mem[val]){
-        continue;
-      }
-      mem[val] = true;
-      ++ctr;
-    }
-    for(ll i{1}; i*i<=n; ++i){
-      ll val = i*i;
-      if(mem[val]){
-        continue;
-      }
-      mem[val] = true;
-      ++ctr;
-    }
+    int sq_ctr = sqrt(n);
+    int cu_ctr = cbrt(n);
+    int e6_ctr = cbrt(sq_ctr);
+    int ctr = sq_ctr + cu_ctr - e6_ctr;
     cout << ctr << endl;
   }
   return 0;
