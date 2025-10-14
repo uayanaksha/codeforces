@@ -15,24 +15,18 @@ int main(void){
   }
 
   vector<bool> slr(r, false), slc(c, false);
+  int evilr{}, evilc{};
 
   for(int i{}; i<r; ++i){
     bool signal = true;
     for(int j{}; j<c; ++j){
       if(mem[i][j] == 'S'){
+        if(!slr[i]) ++evilr;
+        if(!slc[j]) ++evilc;
         slr[i] = true;
         slc[j] = true;
       }
     }
-  }
-
-  int evilr{}, evilc{};
-  for(int i{}; i<r; ++i){
-    if(slr[i]) evilr++;
-  }
-
-  for(int i{}; i<c; ++i){
-    if(slc[i]) evilc++;
   }
 
   int selected = r*c - evilc*evilr;
