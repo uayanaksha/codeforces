@@ -12,14 +12,14 @@ void solve(){
   bool found = false;
   int k = 0;
   for(int j{}; j<m && k < vika.size(); ++j){
-    for(int i{}; i<n && !found; ++i){
+    for(int i{}; i<n; ++i){
       if(v[i][j] == vika[k]){
         k++;
         break;
       }
     }
-    found = k == vika.size();
   }
+  found = k == vika.size();
   cout << (found ? "YES" : "NO") << '\n';
 }
 int main(void){
